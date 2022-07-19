@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CMD_ARGS=$1
-KEYCLOAK_DOCKER_IMAGE="quay.io/keycloak/keycloak:latest"
+KEYCLOAK_DOCKER_IMAGE="quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}"
 
 function keycloak_stop() {
     docker stop unittest_keycloak &> /dev/null
