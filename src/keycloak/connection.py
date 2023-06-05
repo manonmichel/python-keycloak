@@ -87,7 +87,10 @@ class ConnectionManager(object):
     def __del__(self):
         """Del method."""
         if hasattr(self, "_s"):
-            self._s.close()
+            try:
+                self._s.close()
+            except Exception:
+                pass
 
     @property
     def base_url(self):
